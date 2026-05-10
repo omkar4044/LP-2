@@ -1,0 +1,44 @@
+
+sayarams...@gmail.com
+24 Mar 2026, 13:45:49
+to AVCOE-COMP-LP-II_Batch_T7
+LL please Create Salesforce account Using Link: 
+https://developer.salesforce.com/signup
+
+
+Example:
+STEP 1: Create One Custom Object
+Click Setup (⚙) → Object Manager
+Click Create → Custom Object
+Enter:
+Label: Note
+Plural Label: Notes
+Record Name: Note Name (Text)
+Click Save
+✔ Done — your object is created!
+
+ STEP 2: Create a Tab
+Setup → Tabs
+Under Custom Object Tabs, click New
+Select Note
+Choose any icon
+Click Save
+ Now your object is visible to users.
+
+ STEP 3: Create a Simple App
+Setup → App Manager
+Click New Lightning App
+App Name: Notes App
+Click Next 2–3 times (do nothing)
+Add Notes to the Navigation Items
+Click Save & Finish
+Nowapp is ready!
+
+How to Use It
+Click App Launcher (9 dots)
+Open Notes App
+Click Notes
+Click New
+Type a Note and Save
+Done! 
+ In this way Basic Salesforce app possible
