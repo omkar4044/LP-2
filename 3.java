@@ -37,6 +37,197 @@ public class SelectionSort {
 
 
 
+
+
+import java.util.*;
+
+public class JobScheduling {
+
+    public static void main(String[] args) {
+
+        int profit[] = {100, 19, 27, 25, 15};
+        char job[] = {'A', 'B', 'C', 'D', 'E'};
+
+        // Simple Greedy Sorting
+        for (int i = 0; i < profit.length - 1; i++) {
+
+            for (int j = i + 1; j < profit.length; j++) {
+
+                if (profit[i] < profit[j]) {
+
+                    int temp = profit[i];
+                    profit[i] = profit[j];
+                    profit[j] = temp;
+
+                    char t = job[i];
+                    job[i] = job[j];
+                    job[j] = t;
+                }
+            }
+        }
+
+        System.out.println("Job Order:");
+
+        for (int i = 0; i < job.length; i++) {
+            System.out.print(job[i] + " ");
+        }
+    }
+}
+
+
+
+// ## What is Job Scheduling?
+
+// Job Scheduling is a **Greedy Algorithm** used to arrange jobs in an order that gives **maximum profit** or better performance.
+
+// Each job has:
+
+// * Job name
+// * Profit
+// * Deadline (optional)
+
+// The algorithm selects important jobs first.
+
+// ---
+
+// ## Why is it Used?
+
+// It is used to:
+
+// * Complete important tasks first
+// * Increase profit
+// * Save time and resources
+// * Improve system performance
+
+// ---
+
+// ## Applications
+
+// * CPU Scheduling
+// * Task Management
+// * Project Planning
+// * Production Industry
+// * Cloud Computing
+
+// ---
+
+// # Code Explanation
+
+// ```java id="x9r4mb"
+// import java.util.*;
+// ```
+
+// Imports Java utility package.
+
+// ---
+
+// ```java id="h2m7qv"
+// public class JobScheduling {
+// ```
+
+// Creates the class named `JobScheduling`.
+
+// ---
+
+// ```java id="j5p8ks"
+// int profit[] = {100, 19, 27, 25, 15};
+// char job[] = {'A', 'B', 'C', 'D', 'E'};
+// ```
+
+// Two arrays are created:
+
+// * `profit[]` stores profit of jobs
+// * `job[]` stores job names
+
+// Example:
+
+// * Job A → Profit 100
+// * Job B → Profit 19
+
+// ---
+
+// ```java id="n6v2cy"
+// for (int i = 0; i < profit.length - 1; i++) {
+// ```
+
+// Outer loop for sorting.
+
+// ---
+
+// ```java id="t3w9lz"
+// for (int j = i + 1; j < profit.length; j++) {
+// ```
+
+// Inner loop compares profits.
+
+// ---
+
+// ```java id="g8q1fa"
+// if (profit[i] < profit[j]) {
+// ```
+
+// Checks if current profit is smaller.
+
+// If yes, swap jobs.
+
+// This arranges jobs in descending order of profit.
+
+// ---
+
+// ```java id="b4k7nr"
+// int temp = profit[i];
+// profit[i] = profit[j];
+// profit[j] = temp;
+// ```
+
+// Swaps profit values.
+
+// ---
+
+// ```java id="m1x5pd"
+// char t = job[i];
+// job[i] = job[j];
+// job[j] = t;
+// ```
+
+// Swaps job names also.
+
+// ---
+
+// ```java id="u7c3qe"
+// System.out.println("Job Order:");
+// ```
+
+// Prints heading.
+
+// ---
+
+// ```java id="r2n8vy"
+// for (int i = 0; i < job.length; i++) {
+//     System.out.print(job[i] + " ");
+// }
+// ```
+
+// Prints sorted job order.
+
+// ---
+
+// ## Output
+
+// ```text id="y6p4ws"
+// Job Order:
+// A C D B E
+// ```
+
+// Jobs are arranged from highest profit to lowest profit using Greedy method.
+
+
+
+
+
+
+
+
 // # Selection Sort – Theory
 
 // ## Introduction
