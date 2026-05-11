@@ -1,0 +1,110 @@
+
+//UI
+public with sharing class Calculator {
+
+    public Integer num1 {get; set;}
+    public Integer num2 {get; set;}
+    public Decimal result {get; set;}
+
+    // Addition
+    public void add() {
+        result = num1 + num2;
+    }
+
+    // Subtraction
+    public void subtract() {
+        result = num1 - num2;
+    }
+
+    // Multiplication
+    public void multiply() {
+        result = num1 * num2;
+    }
+
+    // Division
+    public void divide() {
+
+        if(num2 != 0) {
+            result = (Decimal)num1 / num2;
+        }
+        else {
+            result = 0;
+        }
+    }
+}
+
+<apex:page controller="Calculator">
+
+    <apex:form >
+
+        <apex:pageBlock title="Simple Calculator">
+
+            <apex:pageBlockSection columns="1">
+
+                <apex:inputText value="{!num1}" label="First Number"/>
+
+                <apex:inputText value="{!num2}" label="Second Number"/>
+
+                <h2>Result = {!result}</h2>
+
+            </apex:pageBlockSection>
+
+            <apex:pageBlockButtons >
+
+                <apex:commandButton value="Add" action="{!add}"/>
+                <apex:commandButton value="Subtract" action="{!subtract}"/>
+                <apex:commandButton value="Multiply" action="{!multiply}"/>
+                <apex:commandButton value="Divide" action="{!divide}"/>
+
+            </apex:pageBlockButtons>
+
+        </apex:pageBlock>
+
+    </apex:form>
+
+</apex:page>
+
+
+
+//with out UI
+
+public class Calculator1 {
+
+    // Addition
+    public static Integer add(Integer a, Integer b) {
+        return a + b;
+    }
+
+    // Subtraction
+    public static Integer subtract(Integer a, Integer b) {
+        return a - b;
+    }
+
+    // Multiplication
+    public static Integer multiply(Integer a, Integer b) {
+        return a * b;
+    }
+
+    // Division
+    public static Decimal divide(Integer a, Integer b) {
+
+        if (b == 0) {
+            System.debug('Division by zero is not allowed');
+            return 0;
+        }
+
+        return (Decimal)a / b;
+    }
+
+    // Main Method
+    public static void main() {
+
+        Integer x = 20;
+        Integer y = 10;
+
+        System.debug('Addition = ' + add(x, y));
+        System.debug('Subtraction = ' + subtract(x, y));
+        System.debug('Multiplication = ' + multiply(x, y));
+        System.debug('Division = ' + divide(x, y));
+    }
+}
