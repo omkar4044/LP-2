@@ -38,3 +38,266 @@ Click New
 Type a Note and Save
 Done! 
  In this way Basic Salesforce app possible
+
+
+
+
+# Hospital Management System in Salesforce (Simple Mini Project)
+
+## STEP 0: Create Salesforce Developer Account
+
+Open:
+[Salesforce Developer Signup](https://developer.salesforce.com/signup?utm_source=chatgpt.com)
+
+Fill details:
+
+* First Name
+* Last Name
+* Email
+* Role: Student
+* Company: College Name
+* Username: use unique email format
+
+Click **Sign Me Up**
+
+Verify email and login to Salesforce.
+
+---
+
+# STEP 1: Create Custom Object — Patient
+
+* Click **Setup (⚙)**
+* Open **Object Manager**
+* Click **Create → Custom Object**
+
+Enter:
+
+| Field        | Value        |
+| ------------ | ------------ |
+| Label        | Patient      |
+| Plural Label | Patients     |
+| Record Name  | Patient Name |
+| Data Type    | Text         |
+
+Click **Save**
+
+✔ Patient object created
+
+---
+
+# STEP 2: Create Custom Object — Doctor
+
+Again:
+
+* Object Manager
+* Create → Custom Object
+
+Enter:
+
+| Field        | Value       |
+| ------------ | ----------- |
+| Label        | Doctor      |
+| Plural Label | Doctors     |
+| Record Name  | Doctor Name |
+| Data Type    | Text        |
+
+Click **Save**
+
+✔ Doctor object created
+
+---
+
+# STEP 3: Create Custom Object — Appointment
+
+Again create one more object.
+
+| Field        | Value          |
+| ------------ | -------------- |
+| Label        | Appointment    |
+| Plural Label | Appointments   |
+| Record Name  | Appointment ID |
+| Data Type    | Auto Number    |
+
+Display Format:
+
+```text
+APP-{000}
+```
+
+Starting Number:
+
+```text
+1
+```
+
+Click **Save**
+
+✔ Appointment object created
+
+---
+
+# STEP 4: Add Fields to Patient Object
+
+Go to:
+
+* Object Manager → Patient
+* Fields & Relationships → New
+
+Create these fields:
+
+| Field Type | Field Name     |
+| ---------- | -------------- |
+| Number     | Age            |
+| Phone      | Contact Number |
+| Picklist   | Gender         |
+| Text Area  | Address        |
+
+For Gender Picklist values:
+
+```text
+Male
+Female
+Other
+```
+
+✔ Patient details ready
+
+---
+
+# STEP 5: Add Fields to Doctor Object
+
+Create fields:
+
+| Field Type | Field Name     |
+| ---------- | -------------- |
+| Text       | Specialization |
+| Phone      | Contact Number |
+| Email      | Email          |
+
+✔ Doctor details ready
+
+---
+
+# STEP 6: Add Fields to Appointment Object
+
+Create these fields:
+
+| Field Type          | Field Name       |
+| ------------------- | ---------------- |
+| Lookup Relationship | Patient          |
+| Lookup Relationship | Doctor           |
+| Date                | Appointment Date |
+| Picklist            | Status           |
+
+Status values:
+
+```text
+Scheduled
+Completed
+Cancelled
+```
+
+✔ Appointment management ready
+
+---
+
+# STEP 7: Create Tabs
+
+Go to:
+
+* Setup → Tabs
+
+Under **Custom Object Tabs** click **New**
+
+Create tabs for:
+
+1. Patient
+2. Doctor
+3. Appointment
+
+Choose any icons and click **Save**
+
+✔ Tabs created
+
+---
+
+# STEP 8: Create Hospital Management App
+
+Go to:
+
+* Setup → App Manager
+* Click **New Lightning App**
+
+Enter:
+
+```text
+Hospital Management System
+```
+
+Click **Next** 2–3 times
+
+In Navigation Items add:
+
+* Patients
+* Doctors
+* Appointments
+
+Click:
+
+```text
+Save & Finish
+```
+
+✔ App created successfully
+
+---
+
+# STEP 9: How to Use the App
+
+* Click **App Launcher (9 dots)**
+* Open **Hospital Management System**
+
+Now:
+
+* Add Patients
+* Add Doctors
+* Create Appointments
+
+Example:
+
+* Patient: Rahul Patil
+* Doctor: Dr. Sharma
+* Appointment Date: 15-May-2026
+
+Click **Save**
+
+✔ Mini Hospital Management System ready
+
+---
+
+# Optional Extra Features (For More Marks)
+
+You can also add:
+
+* Reports
+* Dashboard
+* Validation Rules
+* Flow Automation
+* Email Notification
+
+Example:
+
+* Send email when appointment is created.
+
+---
+
+# Final Objects Used
+
+| Object      | Purpose               |
+| ----------- | --------------------- |
+| Patient     | Store patient details |
+| Doctor      | Store doctor details  |
+| Appointment | Manage appointments   |
+
+This is a simple beginner-friendly Salesforce Hospital Management System project with 3 tabs and real CRUD operations.
+
