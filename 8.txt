@@ -242,6 +242,16 @@ In Navigation Items add:
 * Doctors
 * Appointments
 
+click Next
+MOST IMPORTANT STEP
+You will see:
+
+in User Profiles
+
+Select:
+System Administrator
+
+
 Click:
 
 ```text
